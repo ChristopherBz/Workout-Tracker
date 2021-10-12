@@ -49,12 +49,24 @@ router.post("/workouts", async (req,res)=>{
 // Get the last 7 workouts
 router.get("/workouts/range", async (req,res)=>{
     try{
-        const workoutData = await db.Workout.aggregate([{
-            $addFields:{
-                totalDuration:{$sum:"$exercises.duration"}
-                }
-            }])
-            .skip(await db.Workout.count() - 7)
+        let countTotal = await db.Workout.count();
+        let workoutData = null;
+        if (countTotal > 7)
+        { 
+            workoutData = await db.Workout.aggregate([{
+                $addFields:{
+                    totalDuration:{$sum:"$exercises.duration"}
+                    }
+                }]).skip(countTotal-7);
+        }
+        else
+        {
+            workoutData = await db.Workout.aggregate([{
+                $addFields:{
+                    totalDuration:{$sum:"$exercises.duration"}
+                    }
+                }]);
+        }
         console.log(workoutData)
         res.status(200).json(workoutData)
     } catch(err){
