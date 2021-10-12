@@ -15,7 +15,7 @@ A workout tracker using a Mongo database with a Mongoose schema and handling rou
 - [Questions](#Contact-Information)  
 
 ### Demo
-![Screenshot](https://github.com/ChristopherBz/Workout-Tracker/blob/8049e24623df30c0bc6bb7850cd0248efed306c0/assets/Fitness%20Chart.gif)
+![Screenshot](https://github.com/ChristopherBz/Workout-Tracker/blob/9a74ec0e20445eb43e2fc697f053e610d0912e3b/assets/Fitness%20tracker.gif)
 
 ### Deployed
 Find the deployed application here: https://thawing-lake-93941.herokuapp.com/
