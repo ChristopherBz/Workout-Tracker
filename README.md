@@ -30,8 +30,8 @@ To clone the repo:
 git git@github.com:ChristopherBz/Workout-Tracker.git
 ``` 
 Run 'npm install' to install dependencies  
-Create a .env file and add your MySQL login details 
-Enter 'npm start' in the terminal to run the server
+Run Mongo in the local terminal
+Run "npm start"
 
 ## Technology
 
